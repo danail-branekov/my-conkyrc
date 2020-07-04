@@ -83,7 +83,7 @@ ${execbar nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits}
 ${execgraph "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits"}
 
 ${font bold}MEMORY ${hr 2}${font :size=10}
-${font normal:size=8}RAM $alignc $mem / $memmax $alignr $memperc%
+RAM $alignc $mem / $memmax $alignr $memperc%
 $membar
 SWAP $alignc ${swap} / ${swapmax} $alignr ${swapperc}%
 ${swapbar}
