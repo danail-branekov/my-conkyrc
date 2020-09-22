@@ -70,6 +70,7 @@ Processes  $alignr ${execi 1000 ps aux | wc -l}
 ${font bold}CPU ${hr 2}${font :size=10}
 Temperature $alignr ${exec sensors | sed -rn 's/.*Tdie:\s+.([0-9|\.]+).*/\1/p'}°C
 Fan Speed $alignr ${exec sensors | grep fan2 | awk '{ print $2 }'} RPM
+Frequency $alignr ${freq} MHz
 Usage $alignr ${cpu}%
 ${cpubar -t}
 ${cpugraph cpu0 -t}
