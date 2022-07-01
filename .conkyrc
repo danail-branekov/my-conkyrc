@@ -36,7 +36,7 @@ conky.config = {
 	own_window = true,
 	own_window_type = 'normal',
 	own_window_argb_visual = true,
-	own_window_argb_value = 50,
+	own_window_argb_value = 130,
 	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 	border_inner_margin = 5,
 	border_outer_margin = 0,
@@ -49,7 +49,7 @@ conky.config = {
 	draw_borders = false,
 	draw_graph_borders = false,
 	use_xft = true,
-	font = 'JetBrains Mono:size=10',
+	font = 'Noto Sans',
 	xftalpha = 0.8,
 	uppercase = false,
 	minimum_width = 500, minimum_height = 0,
@@ -97,17 +97,19 @@ ${font bold}DISK USAGE ${hr 2}${font :size=10}
 ${fs_bar /}
 /mnt/storage $alignc ${fs_used /mnt/storage} / ${fs_size /mnt/storage} $alignr ${fs_used_perc /mnt/storage}%
 ${fs_bar /mnt/storage}
+/mnt/vault $alignc ${fs_used /mnt/vault} / ${fs_size /mnt/vault} $alignr ${fs_used_perc /mnt/vault}%
+${fs_bar /mnt/vault}
 /mnt/win $alignc ${fs_used /mnt/win} / ${fs_size /mnt/win} $alignr ${fs_used_perc /mnt/win}%
 ${fs_bar /mnt/win}
 /mnt/win_storage $alignc ${fs_used /mnt/win_storage} / ${fs_size /mnt/win_storage} $alignr ${fs_used_perc /mnt/win_storage}%
 ${fs_bar /mnt/win_storage}
 
 ${font bold}NETWORK ${hr 2}${font :size=10}
-Down: ${downspeed enp37s0}  ${alignr}Up: ${upspeed enp37s0}
-${downspeedgraph enp37s0 60,250 } ${alignr}${upspeedgraph enp37s0 60,250 }
+Down: ${downspeed enp9s0}  ${alignr}Up: ${upspeed enp9s0}
+${downspeedgraph enp9s0 60,250 } ${alignr}${upspeedgraph enp9s0 60,250 }
 
 ${font bold}TOP PROCESSES ${hr 2}${font :size=10}
-${font normal:size=8}Name $alignr PID   CPU%   MEM%${font normal:size=8}
+${font normal:size=9}Name $alignr PID   CPU%   MEM%${font normal:size=9}
 ${top name 1} $alignr ${top pid 1} ${top cpu 1}% ${top mem 1}%
 ${top name 2} $alignr ${top pid 2} ${top cpu 2}% ${top mem 2}%
 ${top name 3} $alignr ${top pid 3} ${top cpu 3}% ${top mem 3}%
